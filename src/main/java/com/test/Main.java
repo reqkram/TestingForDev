@@ -10,12 +10,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         File file = null;
         String receiptNo = "test";
-
-       // file = Files.createTempFile(EP_FILE, receiptNo + ".pdf").toFile();
-
-        Path tempPath = Files.createTempDirectory(receiptNo);
-        File tempDir = tempPath.toFile();
-        file = new File(tempDir, "ep_payment" + receiptNo + ".pdf");
+        file = File.createTempFile(EP_FILE + receiptNo ,".pdf");
         boolean isReadable = file.setReadable(true, true);
         boolean isWritable =file.setWritable(true, true);
         boolean isExecutable = file.setExecutable(true, true);
