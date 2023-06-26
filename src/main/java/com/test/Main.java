@@ -11,7 +11,8 @@ public class Main {
         try{
             String receiptNo = "test1111";
             String suffix = ".pdf";
-            File fileFolder = Files.createTempDirectory(EP_FILE).toFile();
+            File fileFolder = new File(System.getProperty("java.io.tmpdir"), EP_FILE);
+
             boolean isReadable = fileFolder.setReadable(true, true);
             boolean isWritable =fileFolder.setWritable(true, true);
             boolean isExecutable = fileFolder.setExecutable(true, true);
@@ -21,7 +22,6 @@ public class Main {
             System.err.println(isExecutable);
             File file =  new File(fileFolder, receiptNo + suffix);
             System.err.println(file.getAbsolutePath());
-
         }catch (Exception e){
             System.err.println(e.getMessage());
         }
