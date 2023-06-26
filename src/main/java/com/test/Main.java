@@ -2,8 +2,6 @@ package com.test;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public class Main {
     final static String EP_FILE = "ep_file";
