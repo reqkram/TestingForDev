@@ -13,7 +13,7 @@ public class Main {
 
        // file = Files.createTempFile(EP_FILE, receiptNo + ".pdf").toFile();
 
-        Path tempPath = Files.createTempDirectory("ep_payment");
+        Path tempPath = Files.createTempDirectory(receiptNo);
         File tempDir = tempPath.toFile();
         file = new File(tempDir, "ep_payment" + receiptNo + ".pdf");
         boolean isReadable = file.setReadable(true, true);
