@@ -8,9 +8,8 @@ import java.nio.file.Path;
 public class Main {
     final static String EP_FILE = "ep_file";
     public static void main(String[] args) throws IOException {
-        File file = null;
         String receiptNo = "test";
-        file = File.createTempFile(EP_FILE + receiptNo ,".pdf");
+        File file = File.createTempFile(EP_FILE + receiptNo ,".pdf");
         boolean isReadable = file.setReadable(true, true);
         boolean isWritable =file.setWritable(true, true);
         boolean isExecutable = file.setExecutable(true, true);
