@@ -11,9 +11,9 @@ public class Main {
         File file = null;
         String receiptNo = "test";
 
-        file = Files.createTempFile(EP_FILE, receiptNo + ".pdf").toFile();
+       // file = Files.createTempFile(EP_FILE, receiptNo + ".pdf").toFile();
 
-        Path tempPath = Files.createTempDirectory("");
+        Path tempPath = Files.createTempDirectory("ep_payment");
         File tempDir = tempPath.toFile();
         file = new File(tempDir, "ep_payment" + receiptNo + ".pdf");
         boolean isReadable = file.setReadable(true, true);
