@@ -10,14 +10,18 @@ public class Main {
     public static void main(String[] args) throws IOException {
         try{
             String receiptNo = "test";
-            File file = Files.createTempFile(EP_FILE + receiptNo ,".pdf").toFile();
-            boolean isReadable = file.setReadable(true, true);
-            boolean isWritable =file.setWritable(true, true);
-            boolean isExecutable = file.setExecutable(true, true);
-            System.err.println(file.getAbsolutePath());
+            String suffix = ".pdf";
+            File fileFolder = Files.createTempDirectory(EP_FILE).toFile();
+            boolean isReadable = fileFolder.setReadable(true, true);
+            boolean isWritable =fileFolder.setWritable(true, true);
+            boolean isExecutable = fileFolder.setExecutable(true, true);
+            System.err.println(fileFolder.getAbsolutePath());
             System.err.println(isReadable);
             System.err.println(isWritable);
             System.err.println(isExecutable);
+            File file =  new File(fileFolder, receiptNo + suffix);
+            System.err.println(file.getAbsolutePath());
+
         }catch (Exception e){
             System.err.println(e.getMessage());
         }
