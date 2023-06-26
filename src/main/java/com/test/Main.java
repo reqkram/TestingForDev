@@ -9,7 +9,7 @@ public class Main {
     final static String EP_FILE = "ep_file";
     public static void main(String[] args) throws IOException {
         try{
-            String receiptNo = "test";
+            String receiptNo = "test111";
             File file = File.createTempFile(EP_FILE + receiptNo ,".pdf");
             boolean isReadable = file.setReadable(true, true);
             boolean isWritable =file.setWritable(true, true);
