@@ -7,12 +7,12 @@ import java.nio.file.Path;
 
 public class Main {
     final static String EP_FILE = "ep_file";
+    final static String TEMP_DIRECTORY = "java.io.tmpdir";
     public static void main(String[] args) throws IOException {
         try{
-            String receiptNo = "test1111";
+            String receiptNo = "test";
             String suffix = ".pdf";
-            File fileFolder = new File(System.getProperty("java.io.tmpdir"), EP_FILE);
-
+            File fileFolder = new File(System.getProperty(TEMP_DIRECTORY), EP_FILE);
             boolean isReadable = fileFolder.setReadable(true, true);
             boolean isWritable =fileFolder.setWritable(true, true);
             boolean isExecutable = fileFolder.setExecutable(true, true);
