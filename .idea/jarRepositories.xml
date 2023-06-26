@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="ext-snapshots" />
+      <option name="name" value="ext-snapshots" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/ext-snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="redhat-ga" />
+      <option name="name" value="Redhat GA" />
+      <option name="url" value="https://maven.repository.redhat.com/ga/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="internal.snapshot" />
+      <option name="name" value="internal.snapshot" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/libs-snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="internal.release" />
+      <option name="name" value="internal.release" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/libs-releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common-central" />
+      <option name="name" value="common-central" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/central" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ext-releases" />
+      <option name="name" value="ext-releases" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/ext-releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common-repo1" />
+      <option name="name" value="common-repo1" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/repo1" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common-redhat-ga" />
+      <option name="name" value="redhat-ga-repository" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/redhat-ga-repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common-jcenter" />
+      <option name="name" value="common-jcenter" />
+      <option name="url" value="http://192.168.168.225:8081/artifactory/jcenter" />
+    </remote-repository>
+  </component>
+</project>
