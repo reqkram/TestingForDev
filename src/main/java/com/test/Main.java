@@ -3,6 +3,7 @@ package com.test;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.security.SecureRandom;
 
 public class Main {
     static final String EP_FILE = "ep_file";
@@ -11,7 +12,7 @@ public class Main {
         try{
             String receiptNo = "test";
             String suffix = ".pdf";
-            File file =  new File(System.getProperty(TEMP_DIRECTORY), receiptNo + suffix);
+            File file =  new File(System.getProperty(TEMP_DIRECTORY), EP_FILE + getRandomString(10) + receiptNo + suffix);
             boolean isReadable = file.setReadable(true, true);
             boolean isWritable =file.setWritable(true, true);
             boolean isExecutable = file.setExecutable(true, true);
@@ -22,7 +23,7 @@ public class Main {
             System.err.println(isExecutable);
             System.err.println(file.getAbsolutePath());
             System.err.println(file.exists());
-
+/*
             File tempFile = Files.createTempFile(EP_FILE, receiptNo + suffix).toFile();
             boolean isReadabletempFile = tempFile.setReadable(true, true);
             boolean isWritabletempFile =tempFile.setWritable(true, true);
@@ -31,9 +32,15 @@ public class Main {
             System.err.println(isWritabletempFile);
             System.err.println(isExecutabletempFile);
             System.err.println(tempFile.getAbsolutePath());
-            System.err.println(tempFile.exists());
+            System.err.println(tempFile.exists());*/
         }catch (Exception e){
             System.err.println(e.getMessage());
         }
+    }
+
+    public static String getRandomString(int length) {
+        String charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String randomString = RandomStringUtils.random(length, 0, charset.length(), false, false, charset.toCharArray(), new SecureRandom());
+        return randomString;
     }
 }
