@@ -10,16 +10,17 @@ public class Main {
         try{
             String receiptNo = "test";
             String suffix = ".pdf";
-            File fileFolder = new File(System.getProperty(TEMP_DIRECTORY), EP_FILE);
-            boolean isReadable = fileFolder.setReadable(true, true);
-            boolean isWritable =fileFolder.setWritable(true, true);
-            boolean isExecutable = fileFolder.setExecutable(true, true);
-            System.err.println(fileFolder.getAbsolutePath());
+            File file =  new File(System.getProperty(TEMP_DIRECTORY), receiptNo + suffix);
+            boolean isReadable = file.setReadable(true, true);
+            boolean isWritable =file.setWritable(true, true);
+            boolean isExecutable = file.setExecutable(true, true);
+            boolean isCreated = file.createNewFile();
+            System.err.println(isCreated);
             System.err.println(isReadable);
             System.err.println(isWritable);
             System.err.println(isExecutable);
-            File file =  new File(fileFolder, receiptNo + suffix);
             System.err.println(file.getAbsolutePath());
+            System.err.println(file.exists());
         }catch (Exception e){
             System.err.println(e.getMessage());
         }
