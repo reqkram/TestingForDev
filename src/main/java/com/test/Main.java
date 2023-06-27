@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Main {
-    final static String EP_FILE = "ep_file";
-    final static String TEMP_DIRECTORY = "java.io.tmpdir";
+    static final String EP_FILE = "ep_file";
+    static final String TEMP_DIRECTORY = "java.io.tmpdir";
     public static void main(String[] args) throws IOException {
         try{
             String receiptNo = "test";
