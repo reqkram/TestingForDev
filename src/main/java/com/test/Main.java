@@ -23,7 +23,8 @@ public class Main {
             System.err.println(isExecutable);
             System.err.println(file.getAbsolutePath());
             System.err.println(file.exists());
-/*
+
+            /*
             File tempFile = Files.createTempFile(EP_FILE, receiptNo + suffix).toFile();
             boolean isReadabletempFile = tempFile.setReadable(true, true);
             boolean isWritabletempFile =tempFile.setWritable(true, true);
