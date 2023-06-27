@@ -2,6 +2,7 @@ package com.test;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 
 public class Main {
     static final String EP_FILE = "ep_file";
@@ -21,6 +22,18 @@ public class Main {
             System.err.println(isExecutable);
             System.err.println(file.getAbsolutePath());
             System.err.println(file.exists());
+
+            File tempFile = Files.createTempFile(EP_FILE, receiptNo + suffix).toFile();
+            boolean isReadabletempFile = tempFile.setReadable(true, true);
+            boolean isWritabletempFile =tempFile.setWritable(true, true);
+            boolean isExecutabletempFile = tempFile.setExecutable(true, true);
+            boolean isCreatedtempFile = file.createNewFile();
+            System.err.println(isCreatedtempFile);
+            System.err.println(isReadabletempFile);
+            System.err.println(isWritabletempFile);
+            System.err.println(isExecutabletempFile);
+            System.err.println(tempFile.getAbsolutePath());
+            System.err.println(tempFile.exists());
         }catch (Exception e){
             System.err.println(e.getMessage());
         }
