@@ -27,8 +27,6 @@ public class Main {
             boolean isReadabletempFile = tempFile.setReadable(true, true);
             boolean isWritabletempFile =tempFile.setWritable(true, true);
             boolean isExecutabletempFile = tempFile.setExecutable(true, true);
-            boolean isCreatedtempFile = file.createNewFile();
-            System.err.println(isCreatedtempFile);
             System.err.println(isReadabletempFile);
             System.err.println(isWritabletempFile);
             System.err.println(isExecutabletempFile);
